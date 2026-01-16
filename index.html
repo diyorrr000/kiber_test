@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiberxavfsizlik Testi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="glass-panel active">
+            <h1>Kiberxavfsizlik Testi</h1>
+            <p>Bilimingizni sinab ko'ring! Har safar 15 ta tasodifiy savol.</p>
+            <button id="start-btn" class="btn primary">Boshlash</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="glass-panel hidden">
+            <div class="header-info">
+                <span id="question-count">Savol: 1/15</span>
+                <span id="score-display">To'g'ri: 0</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            
+            <h2 id="question-text">Savol matni shu yerda bo'ladi...</h2>
+            
+            <div id="options-container" class="options-grid">
+                <!-- Options will be injected here -->
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="glass-panel hidden">
+            <div class="result-icon">🏆</div>
+            <h2>Natijalar</h2>
+            <p>Siz <span id="final-score">0</span> ta savolga to'g'ri javob berdingiz (15 tadan).</p>
+            <p id="result-message"></p>
+            <button id="restart-btn" class="btn primary">Qayta topshirish</button>
+        </div>
+    </div>
+
+    <!-- Data Source -->
+    <script src="questions.js"></script>
+    <!-- Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
